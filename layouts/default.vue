@@ -5,7 +5,7 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer :fixed="fixed" app>
+    <v-footer app>
       <!--Eventual footer-->
     </v-footer>
   </v-app>

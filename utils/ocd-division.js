@@ -11,5 +11,5 @@ export function getCityId({ city, state }) {
 }
 
 function getLowerSnakeCase(string) {
-  return string.toLowerCase().replace(/ /g,"_");
+  return string.toLowerCase().replace(/ /g, '_')
 }

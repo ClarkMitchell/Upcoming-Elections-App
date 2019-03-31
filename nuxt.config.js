@@ -1,8 +1,13 @@
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 import pkg from './package'
+require('dotenv').config() // overload env of dev watcher process, remove for production
 
 export default {
   mode: 'universal',
+
+  env: {
+    apiUrl: process.env.API_URL
+  },
 
   /*
    ** Headers of the page
@@ -37,15 +42,13 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '@/plugins/vuetify',
-    '@/plugins/axios'
-  ],
+  plugins: ['@/plugins/vuetify', '@/plugins/axios'],
 
   /*
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/dotenv',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
@@ -54,7 +57,7 @@ export default {
    ** Axios module configuration
    */
   axios: {
-    baseUrl: 'https://api.turbovote.org/elections/upcoming'
+    baseURL: process.env.apiUrl
   },
 
   /*
