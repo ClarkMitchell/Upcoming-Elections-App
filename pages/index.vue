@@ -6,13 +6,17 @@
           Card Title
         </v-card-title>
         <v-card-text>
-          <p>
-            Card Text
-          </p>
+          <v-flex xs12 sm6 md3>
+            <v-text-field
+              label="Box"
+              placeholder="Placeholder"
+              box
+            ></v-text-field>
+          </v-flex>
         </v-card-text>
         <v-card-actions>
           <v-spacer />
-          <v-btn color="primary" flat nuxt to="/inspire">
+          <v-btn color="primary" flat>
             Continue
           </v-btn>
         </v-card-actions>
